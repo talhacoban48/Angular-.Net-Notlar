@@ -1,0 +1,25 @@
+var a;
+a = 5;
+var b;
+var c = false;
+var d;
+var e = [1, 2, 3, 4];
+var f = [1, 2, 3];
+var g = ["1", "2", 3, 4];
+var h = ["a", 4, false];
+var krediPayment = 0;
+var havalePayment = 1;
+var eftPayment = 2;
+//enum Payment {kredi, havale, kapidaOdeme, eft};
+var Payment;
+(function (Payment) {
+    Payment[Payment["kredi"] = 0] = "kredi";
+    Payment[Payment["havale"] = 1] = "havale";
+    Payment[Payment["kapidaOdeme"] = 2] = "kapidaOdeme";
+    Payment[Payment["eft"] = 3] = "eft";
+})(Payment || (Payment = {}));
+;
+var kredi = Payment.kredi;
+var havale = Payment.havale;
+var kapidaOdeme = Payment.kapidaOdeme;
+var eft = Payment.eft;

@@ -1,0 +1,7 @@
+
+ng serve -o
+
+ng generate component navbar
+
+ng generate module app-routing
+ng generate module app-routing --flat --module=app

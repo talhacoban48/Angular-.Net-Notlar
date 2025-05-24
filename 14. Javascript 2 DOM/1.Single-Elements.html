@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="card-header">
+        <h3 class="card-title h1" id="title">Todo App</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, recusandae.</p>
+    </div>
+
+    <ul class="gorev-listesi">
+        <li>Görev 1</li>
+        <li>Görev 2</li>
+        <li>Görev 3</li>
+    </ul>
+
+    <script>
+        let sonuc;
+        sonuc = document.getElementById("title");
+        sonuc = document.getElementById("title").id;
+        sonuc = document.getElementById("title").className;
+        sonuc = document.getElementById("title").classList.value;
+
+        document.getElementsByTagName("body")[0].style.margin = "0"
+        document.getElementsByTagName("body")[0].style.padding = "0"
+        document.getElementById("title").style.fontSize = "40px";
+        document.getElementById("title").style.backgroundColor = "yellow";
+        document.getElementById("title").style.display = "inline-block";
+        document.getElementById("title").style.width = "calc(100% - 30px)";
+        document.getElementById("title").style.textAlign = "center";
+        document.getElementById("title").style.margin = "7px 15px";
+        document.getElementById("title").style.padding = "10px 20px";
+        document.getElementById("title").style.border = "2px solid black";
+        document.getElementById("title").style.boxSizing = "border-box";
+
+        document.getElementById("title").innerText = "My Todo App"
+        document.getElementById("title").innerHTML = "<i>My Todo App</i>"
+
+        sonuc = document.querySelector("#title");
+        sonuc = document.querySelector(".card-header");
+        sonuc = document.querySelector("div");
+        sonuc = document.querySelector("li:first-child");
+        sonuc = document.querySelector("li:nth-child(2)");
+        sonuc = document.getElementsByClassName("gorev-listesi")
+        
+        console.log(sonuc)
+    </script>
+    
+</body>
+</html>

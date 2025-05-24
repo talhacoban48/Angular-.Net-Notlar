@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div id="id" class="card-header">
+                        To do App
+                    </div>
+                </div>
+                <div class="card mt-3">
+                    <ul id="tasks" class="list-group list-group-flush">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let sonuc;
+
+        let ul = document.getElementById("tasks");
+
+        let gorevler = [
+            {"id" : 1, "gorevadi" : "Görev 1"},
+            {"id" : 2, "gorevadi" : "Görev 2"},
+            {"id" : 3, "gorevadi" : "Görev 3"},
+            {"id" : 4, "gorevadi" : "Görev 4"}
+        ]
+
+        for (let gorev of gorevler) {
+            let li = `
+            <li class="task list-group-item">
+                <div class="form-check">
+                    <input type="checkbox" id="${gorev.id}" class="form-check-input">
+                    <label class="form-check-label" for="${gorev.id}">${gorev.gorevadi}</label>
+                </div>
+            </li>`
+            ul.insertAdjacentHTML("beforeend", li)
+        }
+
+        sonuc = document.querySelector("#tasks").children[1].getAttribute("class")
+        document.querySelector("#tasks").children[1].setAttribute("class", "bg-info")
+        document.querySelector("#tasks").children[2].classList.add("bg-danger");
+        document.querySelector("#tasks").children[2].classList.remove("task");
+        sonuc = document.querySelector("#tasks").children[2].classList.contains("task");
+
+        
+        document.querySelector("#tasks").children[0].removeAttribute("class")
+        document.querySelector("#tasks").removeAttribute("class")
+        
+        document.querySelector("#tasks").children[0].remove();
+
+        document.getElementById("tasks").remove()
+        document.getElementById("id").parentElement.remove()
+
+
+        console.log(sonuc)
+    </script>
+    
+</body>
+</html>

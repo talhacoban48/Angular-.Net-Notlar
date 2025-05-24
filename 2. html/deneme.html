@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sum Calculator</title>
+    <style>
+      /* Add some styling for the form and result */
+      form {
+        width: 300px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      input[type="text"] {
+        width: 60px;
+        height: 25px;
+        font-size: 16px;
+        margin: 0 10px;
+      }
+
+      input[type="submit"] {
+        width: 80px;
+        height: 30px;
+        font-size: 18px;
+        margin-top: 10px;
+      }
+
+      .result {
+        margin: 20px 0;
+        font-size: 18px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label>Number 1:</label>
+      <input type="text" id="num1" />
+      <br />
+      <label>Number 2:</label>
+      <input type="text" id="num2" />
+      <br />
+      <input type="submit" value="Calculate" onclick="calculateSum(event)" />
+    </form>
+    <div class="result">Result: <span id="result">0</span></div>
+    <script>
+      // Define a function to calculate the sum of the two numbers
+      function calculateSum(event) {
+        // Prevent the form from being submitted
+        event.preventDefault();
+
+        // Get the values of the two input fields
+        var num1 = document.getElementById("num1").value;
+        var num2 = document.getElementById("num2").value;
+
+        // Convert the values to numbers (if they are not already numbers)
+        num1 = parseInt(num1);
+        num2 = parseInt(num2);
+
+        // Calculate the sum
+        var sum = num1 + num2;
+
+        // Display the result
+        document.getElementById("result").innerHTML = sum;
+      }
+    </script>
+  </body>
+</html>

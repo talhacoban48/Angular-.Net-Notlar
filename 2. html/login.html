@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <style>
+    /* Add some styling for the form and buttons */
+    form {
+      width: 300px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      height: 40px;
+      font-size: 16px;
+      margin: 10px 0;
+      padding: 0 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      height: 40px;
+      font-size: 18px;
+      margin-top: 10px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+    }
+
+    input[type="submit"]:hover {
+      cursor: pointer;
+      background-color: #45a049;
+    }
+
+    .error {
+      color: red;
+      margin: 10px 0;
+      font-size: 14px;
+    }
+    /* Add some styling for the body and form */
+    body {
+    background-color: #f1f1f1;
+    font-family: Arial, sans-serif;
+    }
+
+    form {
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 20px;
+    }
+
+    /* Add some styling for the labels and input fields */
+    label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    margin: 10px 0;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border 0.2s;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+    border: 1px solid #4caf50;
+    outline: none;
+    }
+
+    /* Add some styling for the submit button */
+    input[type="submit"] {
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    margin-top: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    }
+
+    input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: #45a049;
+    }
+
+    /* Add some styling for the error message */
+    .error {
+    color: red;
+    margin: 10px 0;
+    font-size: 14px;
+
+        }
+    
+  </style>
+</head>
+<body>
+  <form>
+    <label>Username:</label>
+    <input type="text" id="username">
+    <br>
+    <label>Password:</label>
+    <input type="password" id="password">
+    <br>
+    <input type="submit" value="Login" onclick="login()">
+  </form>
+  <div class="error" id="error"></div>
+  <script>
+    // Define a function to handle the login process
+    function login() {
+      // Get the values of the username and password fields
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      // Validate the username and password (e.g., check if they are empty or don't meet certain criteria)
+      if (username === "") {
+        document.getElementById("error").innerHTML = "Please enter a username.";
+        return;
+      }
+      if (password === "") {
+        document.getElementById("error").innerHTML = "Please enter a password.";
+        return;
+      }
+
+      // If the username and password are valid, proceed with the login process (e.g., send a request to the server to verify the credentials)
+      // ...
+
+      // If the login is successful, redirect the user to the dashboard or home page
+      // window.location.href = "https://example.com/dashboard";
+    }
+  </script>
+</body>
+</html>

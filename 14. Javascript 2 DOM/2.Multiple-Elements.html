@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="card-header">
+        <h3 class="card-title h1" id="title">Todo App</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, recusandae.</p>
+    </div>
+
+    <ul id="gorev-listesi">
+        <li class="gorev">Görev 1</li>
+        <li class="gorev">Görev 2</li>
+        <li class="gorev">Görev 3</li>
+        <li class="gorev">Görev 3</li>
+        <li class="gorev">Görev 3</li>
+        <li class="gorev">Görev 3</li>
+    </ul>
+
+    <script>
+        let sonuc;
+
+        document.getElementById("gorev-listesi").style.backgroundColor
+
+        sonuc = document.getElementsByClassName("gorev");
+        gorevler = document.getElementsByClassName("gorev");
+        for (let i = 0; i < gorevler.length; i++) {
+            gorevler[i].style.fontSize = "15px"
+            gorevler[i].innerText = "item " + (i+1)
+        }
+
+        for (let gorev of gorevler) {
+            gorev.style.color = "#2D3250"
+            gorev.style.listStyle = "none"
+        }
+
+        sonuc = document.getElementsByTagName("li")
+        ul = document.getElementById("gorev-listesi")
+        sonuc = ul.getElementsByTagName("li")
+
+        sonuc = document.querySelectorAll(".gorev")
+        sonuc = document.querySelectorAll("#gorev-listesi li")
+        for (let i = 0; i < sonuc.length; i++) {
+            sonuc[i].style.width = "100px"
+            sonuc[i].style.border = "1px solid black"
+            sonuc[i].style.padding = "5px 10px"
+            sonuc[i].style.borderRadius = "4px"
+            sonuc[i].style.marginBottom = "5px"
+            sonuc[i].style.marginBottom = "5px"
+            sonuc[i].style.backgroundColor = "#F2AFEF"
+            sonuc[i].style.fontWeight = "700"
+            sonuc[i].style.color = "#7D0A0A"
+        }
+
+        console.log(sonuc)
+    </script>
+    
+</body>
+</html>

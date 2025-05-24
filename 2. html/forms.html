@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="register.php">
+      <div>
+        <label for="name">Adı: </label>
+        <input type="text" , id="name" />
+      </div>
+      <div>
+        <label for="name">Soyadı: </label>
+        <input type="text" , id="surname" />
+      </div>
+      <div>
+        <label for="pwd">Şifre: </label>
+        <input type="password" , id="pwd" />
+      </div>
+      <div>
+        <p>en sevdiğin programlama dili:</p>
+        <div>
+          <input type="radio" id="html" name="programlama" />
+          <label for="html">HTML: </label>
+        </div>
+        <div>
+          <input type="radio" id="css" name="programlama" />
+          <label for="css">CSS: </label>
+        </div>
+        <div>
+          <input type="radio" id="javascript" name="programlama" />
+          <label for="javascript">javascript: </label>
+        </div>
+        <div>
+          <input type="radio" id="python" name="programlama" />
+          <label for="python">python: </label>
+        </div>
+      </div>
+      <div>
+        <label for="intro">Kendini anlat</label>
+        <textarea>intro</textarea>
+      </div>
+      <div>
+        <p>en sevdiğin programlama dili:</p>
+        <div>
+          <input type="checkbox" id="html" />
+          <label for="html">HTML: </label>
+        </div>
+        <div>
+          <input type="checkbox" id="css" />
+          <label for="css">CSS: </label>
+        </div>
+        <div>
+          <input type="checkbox" id="javascript" />
+          <label for="javascript">javascript: </label>
+        </div>
+        <div>
+          <input type="checkbox" id="python" />
+          <label for="python">python: </label>
+        </div>
+      </div>
+      <div>
+        <label for="cities">Şehir</label>
+        <select id="cities">
+          <option value="41">Kocaeli</option>
+          <option value="34">İstanbul</option>
+          <option value="48">Muğla</option>
+        </select>
+      </div>
+      <button type="submit">kaydet</button>
+      <button type="reset">Temizle</button>
+    </form>
+  </body>
+</html>
